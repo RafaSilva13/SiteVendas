@@ -10,7 +10,6 @@
   <body>
     
     <div class="container" style="margin-top: 90px;">
-
         <div class="row">
             <div class="col"></div>
 
@@ -62,19 +61,30 @@
 
                     <form style="margin-top:20px;">
                         <div class="mb-3">
-                            <label for="nome" class="form-label">Nome Completo</label>
-                            <input type="text" class="form-control" id="nome">
+                            <label for="nomeCad" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="nomeCad">
                         </div>
 
                         <div class="mb-3">
-                            <label for="usuario" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" id="usuario">
+                            <label for="usuarioCad" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="usuarioCad">
                         </div>
 
                         <div class="mb-3">
-                            <label for="senha" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="senha">
+                            <label for="emailCad" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="emailCad">
                         </div>
+
+                        <div class="mb-3">
+                            <label for="telefoneCad" class="form-label">Telefone</label>
+                            <input type="number" class="form-control" id="telefoneCad">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="senhaCad" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senhaCad">
+                        </div>
+
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Exibir senha</label>
@@ -95,6 +105,10 @@
         $("#itemlogin").addClass('active');
         $("#itemlogin").css("font-weight", "bold")
         $("#itemcadastro").css("color", "black");
+
+        if(document.acess.inp.value == null) {
+            console.log("Olá");
+        }
 
 
         $(function () {
