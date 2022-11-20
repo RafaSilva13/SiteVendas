@@ -49,9 +49,9 @@ $(function () {
         var checkbox = $('#selecao2');
 
         if(checkbox.is(":checked")) {
-            $('#senha').attr('type', 'text');
+            $('#senhaCad').attr('type', 'text');
         } else {
-            $('#senha').attr('type', 'password');
+            $('#senhaCad').attr('type', 'password');
         }
 
     });
