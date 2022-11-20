@@ -1,0 +1,242 @@
+.btnCompra {
+    vertical-align: middle;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagemcarrinho {
+    width: 65px;
+    margin-left: 15px;
+}
+
+.areaLateral {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 920px;
+    width: 265px;
+    background-color: #ffffff;
+    margin-right: 20px;
+    border-radius: 10px;
+    border-color: rgb(189, 189, 189);
+    filter: drop-shadow(0 0 1px rgb(102, 102, 102));
+}
+
+.areaProdutos {
+    filter: drop-shadow(0 0 1px rgb(102, 102, 102));
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 920px;
+    width: 850px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.containerCarrinho {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 500px;
+    max-height: 800px;
+    margin-top: 20px;
+    color: #ffffff;
+    filter: drop-shadow(0 0 1px rgb(102, 102, 102));
+    margin-bottom: 120px;
+}
+
+.mensagemVazio {
+    margin-top: 23%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(199, 199, 199);
+    font-family: 'Cabin', sans-serif;
+}
+
+
+.descricao {
+    border-right: 1px ridge;
+    border-color: rgba(163, 163, 163, 0.842);
+    min-height: 500px;
+    max-height: 800px;
+    padding-top: 20px;
+}
+
+.areaQntd {
+    display: inline-block;
+}
+
+.textQntd {
+    width: 40px;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.btnQntd {
+    vertical-align: middle;
+    width: 40px;
+    text-align: center;
+}
+
+.titulo_lateral {
+    margin-top: 10px;
+}
+
+body {
+    background-color:#ededed;
+}
+
+.inative {
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: 35px;
+    margin-bottom: -5px;
+}
+
+.preco {
+    margin-left: 10px;
+    color: rgb(39, 39, 243);
+    margin-bottom: 5px;
+}
+
+.card {
+    padding: 0%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.8px rgb(54, 54, 54));
+}   
+
+.card-title {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.btn-group {
+    border-color: black;
+    margin-right: 0;
+}
+
+.card-img-top{
+    width: 220px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tituloPrincipal {
+    margin-bottom: 40px;
+}
+
+.img-fluid.rounded-start {
+    height: 150px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.containerIndex {
+    margin-top: 40px;
+    margin-bottom: 120px;
+}
+
+.btncadastro {
+    margin-right: 10px;
+}
+
+.titulo_navbar {
+    color: rgb(197, 196, 196);
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.imagem_logo {
+    width: 40px;
+    margin-left: 15px;
+}
+
+.linha-vertical {
+    height: 40px;
+    border-left: 2px solid;
+    margin-top: 4px;
+    margin-left: 8px;
+    color: rgba(97, 97, 97, 0.842);
+}
+
+.itensNav {
+    font-size: 16px;
+    color: rgb(197, 196, 196);
+
+}
+
+.itensPesquisa {
+    text-decoration: none;
+    color: rgb(109, 108, 108);
+}
+
+.tituloModal {
+    font-weight: 700;
+}
+
+.textoModal{
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: rgb(206, 206, 206);
+    height: 55px;
+    filter: drop-shadow(0 0 1px rgb(77, 76, 76));
+}
+
+.carousel-indicators {
+    color: rgb(77, 77, 77);
+}
+
+.divToast {
+    position: absolute;
+}
+
+footer {
+    
+    height: 40px;
+    background-color: #141414;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.t_itens {
+    color: rgb(114, 113, 113);
+    font-size: 19px;
+    margin-top: 15px;
+    font-weight: 600;
+    height: 415px;
+}
+
+.tituloCarrinho {
+    font-weight: bold;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: #3a3a3a;
+}
+
+.v_itens {
+    color: rgb(66, 65, 65);
+    font-size: 19px;
+    font-weight: 700;
+}
