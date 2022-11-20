@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="d-grid gap-2" style="margin-top: 30px; margin-bottom: 20px;">
-                        <button type="submit" class="btn btn-secondary">Entrar</button>
+                        <button type="submit" class="btn btn-primary" id="btnEntrar">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="d-grid gap-2" style="margin-top: 30px; margin-bottom: 20px;">
-                        <button type="submit" class="btn btn-secondary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary" id="btnCadastro">Cadastrar</button>
                     </div>
                 </form>
             </div>
@@ -97,6 +97,7 @@
 <script src="script/script.js"></script>
 
 <script>
+
     var inicio = "<?php echo $_GET['t']?>";
 
     if (inicio === "l")
@@ -131,6 +132,24 @@
         }));
         
     }
+
+    $(document).ready(function(){
+
+        $("#btnEntrar").addClass('disabled');
+        $("#btnCadastro").addClass('disabled');
+
+        $("input").blur(function(){
+            if(document.getElementById("usuario").value != "" && document.getElementById("senha").value != ""){
+                $("#btnEntrar").removeClass('disabled');
+            }
+        });
+        
+        $("input").blur(function(){
+            if(document.getElementById("nomeCad").value != "" && document.getElementById("usuarioCad").value != "" && document.getElementById("emailCad").value != "" && document.getElementById("telefoneCad").value != "" && document.getElementById("senhaCad").value != ""){
+                $("#btnCadastro").removeClass('disabled');
+            }
+        });
+    });
 
 </script>
 

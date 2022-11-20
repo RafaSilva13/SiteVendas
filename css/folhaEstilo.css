@@ -35,12 +35,21 @@
     border-radius: 10px;
 }
 
+.containerMeusProdutos {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 500px;
+    max-height: 800px;
+    color: #ffffff;
+    filter: drop-shadow(0 0 1px rgb(102, 102, 102));
+    margin-bottom: 120px;
+}
+
 .containerCarrinho {
     background-color: white;
     border-radius: 10px;
     min-height: 500px;
     max-height: 800px;
-    margin-top: 20px;
     color: #ffffff;
     filter: drop-shadow(0 0 1px rgb(102, 102, 102));
     margin-bottom: 120px;
@@ -55,6 +64,11 @@
     font-family: 'Cabin', sans-serif;
 }
 
+.descricaoMP {
+    min-height: 500px;
+    max-height: 800px;
+    padding-top: 20px;
+}
 
 .descricao {
     border-right: 1px ridge;
@@ -211,7 +225,6 @@ body {
 }
 
 footer {
-    
     height: 40px;
     background-color: #141414;
     width: 100%;
@@ -228,9 +241,16 @@ footer {
     height: 415px;
 }
 
+.tituloMP {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #3a3a3a;
+}
+
 .tituloCarrinho {
     font-weight: bold;
-    margin-top: 45px;
+    margin-top: 20px;
     margin-bottom: 20px;
     color: #3a3a3a;
 }

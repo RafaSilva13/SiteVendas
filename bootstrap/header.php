@@ -7,7 +7,7 @@
     <title>Loja Santos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/folhaEstilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600&display=swap" rel="stylesheet">
@@ -41,6 +41,12 @@
         <li class="nav-item active" style="margin-top: 3px; margin-left: 5px;">
             <a class="nav-link" href="carrinho.php">
               <h6 class="itensNav">Carrinho</h6>
+            </a>
+        </li>
+        
+        <li class="nav-item active" style="margin-top: 3px; margin-left: 5px;">
+            <a class="nav-link" href="meusProdutos.php">
+              <h6 class="itensNav">Meus Pedidos</h6>
             </a>
         </li>
     </ul>
