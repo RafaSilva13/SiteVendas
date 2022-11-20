@@ -3,10 +3,7 @@ $("#itemlogin").addClass('active');
 $("#itemlogin").css("font-weight", "bold")
 $("#itemcadastro").css("color", "black");
 
-// if(document.acess.inp.value == null) {
-//     console.log("Olá");
-// }
-
+$(".btnsair").hide();
 
 $(function () {
     $("#login").click(function(){

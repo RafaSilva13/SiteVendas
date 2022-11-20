@@ -235,6 +235,10 @@ footer {
     color: #3a3a3a;
 }
 
+.btn-danger{
+    vertical-align: middle;
+}
+
 .v_itens {
     color: rgb(66, 65, 65);
     font-size: 19px;

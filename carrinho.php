@@ -43,14 +43,16 @@
                                 </p>
                             </div>
 
-                            <div class="col-lg-4 aling-right" style="margin-top: 10px;">
-                                <div class="btn-group inline" role="group">
-                                    <a type="button" class="btn btn-outline-secondary border-secondary" style="margin-right: -1px;" href="reduzirProd.php?cod=<?php echo $prod;?>">-</a>
-                                    <input style="width: 4ch" class="form-control border-secondary rounded-0" type="number" id="quantidade<?php echo $prod;?>" value="<?php echo $itens?>">
-                                    <a type="button" class="btn btn-outline-secondary border-secondary" href="aumentarProd.php?cod=<?php echo $prod;?>">+</a>
-                                </div>
+                            <div class="col-lg-4 aling-right" style="margin-top: 10px; margin-left: -4%;">
+                                <center>
+                                    <div class="btn-group inline" role="group">
+                                        <a type="button" class="btn btn-outline-secondary border-secondary" style="margin-right: -1px;" href="reduzirProd.php?cod=<?php echo $prod;?>">-</a>
+                                        <input style="width: 4ch" class="form-control border-secondary rounded-0" type="number" id="quantidade<?php echo $prod;?>" value="<?php echo $itens?>">
+                                        <a type="button" class="btn btn-outline-secondary border-secondary" href="aumentarProd.php?cod=<?php echo $prod;?>">+</a>
+                                    </div>
 
-                                <button class="btn btn-danger" id="btnModal<?php echo $prod?>">Apagar</button>
+                                    <button class="btn btn-danger" id="btnModal<?php echo $prod?>">Apagar</button>
+                                </center>
                             </div>
                         </div>
                     </div>

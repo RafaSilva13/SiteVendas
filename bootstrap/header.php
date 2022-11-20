@@ -45,9 +45,11 @@
         </li>
     </ul>
 
-    <form class="d-flex aling-right" role="search">
-      <a class="btn btn-outline-light btncadastro" href="login.php?t=c" type="button">CADASTRO</a>
-      <a class="btn btn-light" href="login.php?t=l" type="button">LOGIN</a>
+    <form class="d-flex aling-right" style="padding-top: 5px; padding-bottom: 5px;" role="search">
+      <a class="btn btn-outline-light btncadastro btn-sm" href="login.php?t=c" type="button">CADASTRO</a>
+      <a class="btn btn-light btn-sm"  href="login.php?t=l" type="button">LOGIN</a>
+
+      <a class="btn btn-danger btn-sm btnsair" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 1rem;"  href="login.php?t=l" type="button">SAIR</a>
     </form>
   </div>  
 </nav>
