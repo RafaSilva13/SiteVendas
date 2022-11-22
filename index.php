@@ -20,13 +20,13 @@
 ?>
 
 <!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
-
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100 divDoToast">
     <div class="toast align-items-center text-bg-primary border-0 divToast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
                 <b>Item adicionado ao carrinho.</b>
             </div>
+
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
@@ -72,12 +72,14 @@
                 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
+                    $indice = 0;
+                    
                     while($row = mysqli_fetch_assoc($result)) {
                 ?>
                 
 
                 <div class="col">
-                    <div class="card card<?php echo $value->IdProduto;?>">
+                    <div class="card card<?php echo $indice?>">
                         
                         <img src="<?php echo $row["url_imagem"];?>" class="card-img-top">
                         
@@ -90,7 +92,7 @@
                                 </p>                                  
                                 <div class="row">
                                 
-                                    <a href="adicionarProduto.php?id=<?php echo $row["id_produto"];?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
+                                    <a href="adicionarProduto.php?id=<?php echo $indice;?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
                                 </div>
                             </center>
                         </div>
@@ -98,6 +100,7 @@
                 </div>
                 
                 <?php
+                    $indice++;
                     }
                 } else {
                     echo "0 results";
