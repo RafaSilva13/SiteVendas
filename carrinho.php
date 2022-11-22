@@ -103,7 +103,7 @@
                 <hr style="border: 1px solid;">
                 
                 <div class="row" style="margin-left: -8px;">
-                    <p class="v_itens">Valor Total: R$ <span><?php echo number_format($soma,'2',',');?></span></p>
+                    <p class="v_itens">Valor Total: R$ <span><?php echo number_format($soma,'2',',','.');?></span></p>
                 </div>
 
                 <hr style="border: 1px solid;">

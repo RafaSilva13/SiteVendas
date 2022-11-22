@@ -92,9 +92,9 @@
 
 
                                 <p>
-                                    <s class="inative">R$<?php echo number_format($value->ValorProduto,'2',',');?></s>
+                                    <s class="inative">R$<?php echo number_format($value->ValorProduto,'2',',','.');?></s>
                             
-                                    <b class="preco">R$<?php echo number_format($value->ValorDesconto,'2',',');?></b>
+                                    <b class="preco">R$<?php echo number_format($value->ValorDesconto,'2',',','.');?></b>
                                 </p>                                  
                                 <div class="row">
 
