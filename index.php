@@ -5,14 +5,8 @@
     // Inclui a classe carrinho
     include 'classes/Produtos.class.php';
 
-    // Inicia a sessão
-    session_start();
-    
+    // Inicia a conexão com o banco de dados
     include 'connection.php';
-
-    // Adiciona objetos produtos
-    include 'objetos/criarProdutos.php';    
-
 
     if (isset($_GET['include'])){
 ?>
@@ -78,41 +72,51 @@
             <div class="row row-cols-1 row-cols-md-3 g-3">
                 
                 
-                <?php if (isset($_SESSION['produtos'])){
+                <?php 
                 
-                $produtos = $_SESSION['produtos'];    
-                foreach ($produtos as $ind => $value) { ?>
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+                
+                $sql = "SELECT * FROM produtos";
+                $result = mysqli_query($conn, $sql);
+                
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                ?>
+                
 
                 <div class="col">
                     <div class="card card<?php echo $value->IdProduto;?>">
                         
-                        <img src="<?php echo $value->CaminhoImagem;?>" class="card-img-top">
+                        <img src="<?php echo $row["url_imagem"];?>" class="card-img-top">
                         
                         <div class="card-body">
                             <center> 
-                                <h5 class="card-title"><?php echo $value->NomeProduto;?></h5>
+                                <h5 class="card-title"><?php echo $row["descricao"];?></h5>
 
-
-                                <p>
-                                    <s class="inative">R$<?php echo number_format($value->ValorProduto,'2',',','.');?></s>
-                            
-                                    <b class="preco">R$<?php echo number_format($value->ValorDesconto,'2',',','.');?></b>
+                                <p>                                
+                                    <b class="preco">R$<?php echo number_format($row["preco"],'2',',','.');?></b>
                                 </p>                                  
                                 <div class="row">
-
-                                    <a href="adicionarProduto.php?id=<?php echo $value->IdProduto;?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
+                                
+                                    <a href="adicionarProduto.php?id=<?php echo $row["id_produto"];?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
                                 </div>
                             </center>
                         </div>
                     </div>
                 </div>
-                        
                 
-
                 <?php
                     }
+                } else {
+                    echo "0 results";
                 }
-                ?>   
+                
+                mysqli_close($conn);
+                ?>        
+                    
             </div>
         </div>
     </div>
