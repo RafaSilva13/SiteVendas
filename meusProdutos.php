@@ -37,9 +37,11 @@
                         <div class="col-lg-7" style="margin-left: 35px;">
                             <p>
                                 <b><?php echo $_SESSION['produtos'][$prod]->NomeProduto;?></b>
-                                <span style="margin-left: 80px;">Valor unidade: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto,'2',',');?></span>
-                                <br>       
-                                <span style="margin-top: 10px;">Total Produtos: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto * $itens,'2',',');?></span>
+                                <span style="margin-top: 80px; margin-left: 150px;">Código do pedido: </span>
+                                <br>
+                                <span>Valor unidade: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto,'2',',');?></span>
+                                <span style="margin-top: 10px; margin-left: 107px;">Total Produtos: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto * $itens,'2',',');?></span>
+                                
                             </p>
                         </div>
 
