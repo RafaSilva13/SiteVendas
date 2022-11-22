@@ -7,6 +7,8 @@
 
     // Inicia a sessão
     session_start();
+    
+    include 'connection.php';
 
     // Adiciona objetos produtos
     include 'objetos/criarProdutos.php';    
