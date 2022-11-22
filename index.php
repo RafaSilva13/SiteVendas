@@ -44,20 +44,9 @@
                 <dd></dd>
                 
                 <dd>
-                    <a class="itensPesquisa" onclick="desat1()">Bebidas</a> 
+                    <a class="itensPesquisa" onclick="desat1()">Geral</a> 
                 </dd>
                 
-                <dd>
-                    <a class="itensPesquisa" onclick="desat2()">Temperos</a> 
-                </dd>
-                
-                <dd>
-                    <a class="itensPesquisa" onclick="desat3()">Limpesa</a> 
-                </dd>
-
-                <dd>
-                    <a class="itensPesquisa" onclick="desat4()">Alimentação</a> 
-                </dd>
             </dl>
         </div>
         
@@ -124,43 +113,12 @@
 
 <script>
     function desat1() {
-        $(".card2").hide();
-        $(".card3").hide();
-        $(".card4").hide();
-        $(".card5").hide();
-        $(".card6").hide();
-
         $(".card1").show();
-    }
-    
-    function desat2() {
-        $(".card1").hide();
-        $(".card2").hide();
-        $(".card3").hide();
-        $(".card4").hide();
-        $(".card5").hide();
-
-        $(".card6").show();
-    }
-    
-    function desat3() {
-        $(".card1").hide();
-        $(".card4").hide();
-        $(".card5").hide();
-        $(".card6").hide();
-
         $(".card2").show();
         $(".card3").show();
-    }
-
-    function desat4() {
-        $(".card1").hide();
-        $(".card2").hide();
-        $(".card3").hide();
-        $(".card6").hide();
-
         $(".card4").show();
         $(".card5").show();
+        $(".card6").show();
     }
     
     function ativarItens() {
