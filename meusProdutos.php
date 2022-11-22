@@ -48,6 +48,7 @@
                         <div class="col-lg-3 aling-right" style="margin-top: -8px; margin-left: 0%;">
                             <center>
                                 <span><b>Quantidade:</b> <?php echo $itens?></span>
+                                <br>
                                 <button class="btn btn-danger" style="margin-top: 5px;" id="btnModal<?php echo $prod?>">Cancelar compra</button>
                             </center>
                         </div>
