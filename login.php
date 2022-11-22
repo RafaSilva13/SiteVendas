@@ -3,7 +3,7 @@
     include 'bootstrap/header.php';
 ?>
 
-<div class="container" style="margin-top: 50px; margin-bottom: 120px;">
+<div class="container" style="margin-top: 70px;">
     <div class="row">
         <div class="col"></div>
 

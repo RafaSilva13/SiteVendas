@@ -109,6 +109,7 @@ input[type=number] {
 
 body {
     background-color:#ededed;
+    margin-top: 50px;
 }
 
 .inative {
@@ -163,6 +164,8 @@ body {
 .containerIndex {
     margin-top: 40px;
     margin-bottom: 120px;
+    width: 1150px;
+    position:static;
 }
 
 .btncadastro {
@@ -214,6 +217,11 @@ body {
     background-color: rgb(206, 206, 206);
     height: 55px;
     filter: drop-shadow(0 0 1px rgb(77, 76, 76));
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
+
 }
 
 .carousel-indicators {
@@ -228,7 +236,7 @@ footer {
     height: 40px;
     background-color: #141414;
     width: 100%;
-    position: fixed;
+    position:fixed;
     bottom: 0;
     left: 0;
 }
