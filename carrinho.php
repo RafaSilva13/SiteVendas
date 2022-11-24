@@ -5,9 +5,6 @@
     // Inclui a classe
     include 'classes/Produtos.class.php';
 
-    // Inicia a conexão com o banco de dados
-    include 'connection.php';
-
     // Inicia a sessão
     session_start();
 
@@ -28,30 +25,21 @@
         <div class="col-lg-9 descricao">
 
             <?php if(isset($_SESSION['itensCarrinho'])) { 
-                foreach($_SESSION['itensCarrinho'] as $prod => $itens) { 
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
-                    $sql = "SELECT * FROM produtos";
-                    $result = mysqli_query($conn, $sql);
-
-                    if (mysqli_num_rows($result) > 0) {
-                        while($row = mysqli_fetch_assoc($result)) {
-                ?>
-
+                foreach($_SESSION['itensCarrinho'] as $prod => $itens) { ?>
+                
                 <div class="card" style="padding: 0px; color: black;">
                     <div class="card-body">
                         <div class="row" style="margin-right: -160px;">
                             <div class="col-lg-1">
-                                <img class="imagemcarrinho" src="<?php echo $row["url_imagem"]?>">
+                                <img class="imagemcarrinho" src="<?php echo $_SESSION['produtos'][$prod]->CaminhoImagem;?>">
                             </div>
                             
                             <div class="col-lg-6" style="margin-left: 35px;">
                                 <p>
-                                    <b><?php echo $row["descricao"]?></b>
-                                    <span style="margin-left: 80px;">Valor unidade: R$ <?php echo number_format($row["preco"],'2',',','.');?></span>
+                                    <b><?php echo $_SESSION['produtos'][$prod]->NomeProduto;?></b>
+                                    <span style="margin-left: 80px;">Valor unidade: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto,'2',',','.');?></span>
                                     <br>       
-                                    <span style="margin-top: 10px;">Total Produtos: R$ <?php echo number_format($row["preco"] * $itens,'2',',','.');?></span>
+                                    <span style="margin-top: 10px;">Total Produtos: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto * $itens,'2',',','.');?></span>
                                 </p>
                             </div>
 
@@ -82,15 +70,7 @@
 
                 </script>
 
-                <?php 
-                        }
-                    } else {
-                    echo "0 results";
-                    }
-                    
-                    mysqli_close($conn);
-            
-                    } 
+                <?php } 
                 } else if ((!isset($_SESSION['itensCarrinho'])) || ((isset($_SESSION['itensCarrinho'])) && ($itens === 0))) {
                 ?>
                     <p class="mensagemVazio">Nenhum item adicionado</p>

@@ -1,12 +1,17 @@
 <?php
+
     // Inclui cabeçalho
     include 'bootstrap/header.php';
 
     // Inclui a classe carrinho
     include 'classes/Produtos.class.php';
 
-    // Inicia a conexão com o banco de dados
-    include 'connection.php';
+    // Inicia a sessão
+    session_start();
+    
+    // Adiciona objetos produtos
+    include 'objetos/criarProdutos.php';    
+
 
     if (isset($_GET['include'])){
 ?>
@@ -20,13 +25,13 @@
 ?>
 
 <!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100 divDoToast">
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
     <div class="toast align-items-center text-bg-primary border-0 divToast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
                 <b>Item adicionado ao carrinho.</b>
             </div>
-
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
@@ -44,9 +49,20 @@
                 <dd></dd>
                 
                 <dd>
-                    <a class="itensPesquisa" onclick="desat1()">Geral</a> 
+                    <a class="itensPesquisa" onclick="desat1()">Bebidas</a> 
                 </dd>
                 
+                <dd>
+                    <a class="itensPesquisa" onclick="desat2()">Temperos</a> 
+                </dd>
+                
+                <dd>
+                    <a class="itensPesquisa" onclick="desat3()">Limpesa</a> 
+                </dd>
+
+                <dd>
+                    <a class="itensPesquisa" onclick="desat4()">Alimentação</a> 
+                </dd>
             </dl>
         </div>
         
@@ -61,54 +77,39 @@
             <div class="row row-cols-1 row-cols-md-3 g-3">
                 
                 
-                <?php 
+                <?php if (isset($_SESSION['produtos'])){
                 
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-                
-                $sql = "SELECT * FROM produtos";
-                $result = mysqli_query($conn, $sql);
-                
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    $indice = 0;
-                    
-                    while($row = mysqli_fetch_assoc($result)) {
-                ?>
-                
+                $produtos = $_SESSION['produtos'];    
+                foreach ($produtos as $ind => $value) { ?>
 
                 <div class="col">
-                    <div class="card card<?php echo $indice?>">
+                    <div class="card card<?php echo $value->IdProduto;?>">
                         
-                        <img src="<?php echo $row["url_imagem"];?>" class="card-img-top">
+                        <img src="<?php echo $value->CaminhoImagem;?>" class="card-img-top">
                         
                         <div class="card-body">
                             <center> 
-                                <h5 class="card-title"><?php echo $row["descricao"];?></h5>
+                                <h5 class="card-title"><?php echo $value->NomeProduto;?></h5>
 
-                                <p>                                
-                                    <b class="preco">R$<?php echo number_format($row["preco"],'2',',','.');?></b>
+
+                                <p>                            
+                                    <b class="preco">R$<?php echo number_format($value->ValorProduto,'2',',','.');?></b>
                                 </p>                                  
                                 <div class="row">
-                                
-                                    <a href="adicionarProduto.php?id=<?php echo $indice;?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
+
+                                    <a href="adicionarProduto.php?id=<?php echo $value->IdProduto;?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
                                 </div>
                             </center>
                         </div>
                     </div>
                 </div>
+                        
                 
+
                 <?php
-                    $indice++;
                     }
-                } else {
-                    echo "0 results";
                 }
-                
-                mysqli_close($conn);
-                ?>        
-                    
+                ?>   
             </div>
         </div>
     </div>
@@ -116,12 +117,43 @@
 
 <script>
     function desat1() {
+        $(".card2").hide();
+        $(".card3").hide();
+        $(".card4").hide();
+        $(".card5").hide();
+        $(".card6").hide();
+
         $(".card1").show();
+    }
+    
+    function desat2() {
+        $(".card1").hide();
+        $(".card2").hide();
+        $(".card3").hide();
+        $(".card4").hide();
+        $(".card5").hide();
+
+        $(".card6").show();
+    }
+    
+    function desat3() {
+        $(".card1").hide();
+        $(".card4").hide();
+        $(".card5").hide();
+        $(".card6").hide();
+
         $(".card2").show();
         $(".card3").show();
+    }
+
+    function desat4() {
+        $(".card1").hide();
+        $(".card2").hide();
+        $(".card3").hide();
+        $(".card6").hide();
+
         $(".card4").show();
         $(".card5").show();
-        $(".card6").show();
     }
     
     function ativarItens() {
