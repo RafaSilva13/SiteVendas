@@ -1,6 +1,7 @@
 <?php
     // Inclui pagina header 
     include 'bootstrap/header.php';
+
 ?>
 
 <div class="container" style="margin-top: 70px;">
@@ -24,6 +25,8 @@
                 </div>
                 <hr>
             </div>
+
+            
 
             <div class="arealogin">
                 <h2 style="text-align:center; margin-top: 5px;">Login</h2>
