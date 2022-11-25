@@ -37,9 +37,9 @@
                             <div class="col-lg-6" style="margin-left: 35px;">
                                 <p>
                                     <b><?php echo $_SESSION['produtos'][$prod]->NomeProduto;?></b>
-                                    <span style="margin-left: 80px;">Valor unidade: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto,'2',',','.');?></span>
+                                    <span style="margin-left: 80px;">Valor unidade: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorProduto,'2',',','.');?></span>
                                     <br>       
-                                    <span style="margin-top: 10px;">Total Produtos: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorDesconto * $itens,'2',',','.');?></span>
+                                    <span style="margin-top: 10px;">Total Produtos: R$ <?php echo number_format($_SESSION['produtos'][$prod]->ValorProduto * $itens,'2',',','.');?></span>
                                 </p>
                             </div>
 
@@ -87,7 +87,7 @@
                 
                 if(isset($_SESSION['itensCarrinho'])) {
                     foreach ($_SESSION['itensCarrinho'] as $key => $value) {
-                        $soma += ($_SESSION['produtos'][$key]->ValorDesconto * $value);
+                        $soma += ($_SESSION['produtos'][$key]->ValorProduto * $value);
                         $itens += $value;    
                     }
                 }

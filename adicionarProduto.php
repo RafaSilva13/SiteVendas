@@ -11,5 +11,5 @@
     $item->Inserir($cod, 1);
 
     // Retorna para pagina inicial
-    header("Location: index.php?include=true");
+    header("Location: index.php?include");
 ?>

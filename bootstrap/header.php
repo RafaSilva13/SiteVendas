@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,3 +58,22 @@
     </form>
   </div>  
 </nav>
+
+<?php
+  include 'verifLogin.php';
+
+  if ($verif === 1){
+?>
+  <script>
+    $(".btnsair").show();
+  </script>
+<?php  
+  }
+  else {
+?>
+  <script>
+    $(".btnsair").hide();
+  </script>
+<?php  
+  }
+?>

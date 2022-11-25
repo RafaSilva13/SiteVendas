@@ -3,8 +3,6 @@ $("#itemlogin").addClass('active');
 $("#itemlogin").css("font-weight", "bold")
 $("#itemcadastro").css("color", "black");
 
-$(".btnsair").hide();
-
 $(function () {
     $("#login").click(function(){
         $(".areacadastro").hide();

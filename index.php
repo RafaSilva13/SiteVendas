@@ -17,7 +17,27 @@
 ?>
     <script>
         $(document).ready(function(){
-            $(".toast").toast('show');
+            $(".itemToast").toast('show');
+        });
+    </script>
+<?php
+    }
+
+    if (isset($_GET['cad'])){
+?>
+    <script>
+        $(document).ready(function(){
+            $(".cadToast").toast('show');
+        });
+    </script>
+<?php
+    }
+
+    if (isset($_GET['log'])){
+?>
+    <script>
+        $(document).ready(function(){
+            $(".logToast").toast('show');
         });
     </script>
 <?php
@@ -27,10 +47,36 @@
 <!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
-    <div class="toast align-items-center text-bg-primary border-0 divToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast align-items-center text-bg-primary border-0 divToast itemToast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
                 <b>Item adicionado ao carrinho.</b>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+    <div class="toast align-items-center text-bg-primary border-0 cadToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <b>Usuário cadastrado!</b>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+    <div class="toast align-items-center text-bg-primary border-0 logToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <b>Login Efeituado!</b>
             </div>
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
@@ -45,24 +91,6 @@
                 <dt class="tituloLateral">
                     <a onclick="ativarItens()">Categorias</a>
                 </dt>
-                
-                <dd></dd>
-                
-                <dd>
-                    <a class="itensPesquisa" onclick="desat1()">Bebidas</a> 
-                </dd>
-                
-                <dd>
-                    <a class="itensPesquisa" onclick="desat2()">Temperos</a> 
-                </dd>
-                
-                <dd>
-                    <a class="itensPesquisa" onclick="desat3()">Limpesa</a> 
-                </dd>
-
-                <dd>
-                    <a class="itensPesquisa" onclick="desat4()">Alimentação</a> 
-                </dd>
             </dl>
         </div>
         
@@ -114,57 +142,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    function desat1() {
-        $(".card2").hide();
-        $(".card3").hide();
-        $(".card4").hide();
-        $(".card5").hide();
-        $(".card6").hide();
-
-        $(".card1").show();
-    }
-    
-    function desat2() {
-        $(".card1").hide();
-        $(".card2").hide();
-        $(".card3").hide();
-        $(".card4").hide();
-        $(".card5").hide();
-
-        $(".card6").show();
-    }
-    
-    function desat3() {
-        $(".card1").hide();
-        $(".card4").hide();
-        $(".card5").hide();
-        $(".card6").hide();
-
-        $(".card2").show();
-        $(".card3").show();
-    }
-
-    function desat4() {
-        $(".card1").hide();
-        $(".card2").hide();
-        $(".card3").hide();
-        $(".card6").hide();
-
-        $(".card4").show();
-        $(".card5").show();
-    }
-    
-    function ativarItens() {
-        $(".card1").show();
-        $(".card2").show();
-        $(".card3").show();
-        $(".card4").show();
-        $(".card5").show();
-        $(".card6").show();
-    }
-</script>
 
 <?php
     include 'bootstrap/footer.php';
