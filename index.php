@@ -5,9 +5,6 @@
 
     // Inclui a classe carrinho
     include 'classes/Produtos.class.php';
-
-    // Inicia a sessão
-    session_start();
     
     // Adiciona objetos produtos
     include 'objetos/criarProdutos.php';    
@@ -60,7 +57,7 @@
 <!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
-    <div class="toast align-items-center text-bg-primary border-0 cadToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast align-items-center text-bg-primary border-0 divToast cadToast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
                 <b>Usuário cadastrado!</b>
@@ -73,7 +70,7 @@
 <!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
-    <div class="toast align-items-center text-bg-primary border-0 logToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast align-items-center text-bg-primary border-0 divToast logToast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
                 <b>Login Efeituado!</b>

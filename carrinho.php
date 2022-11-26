@@ -3,10 +3,7 @@
     include 'bootstrap/header.php';
 
     // Inclui a classe
-    include 'classes/Produtos.class.php';
-
-    // Inicia a sessão
-    session_start();
+    include 'classes/Produtos.class.php';   
 
 ?>
 
