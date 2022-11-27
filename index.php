@@ -9,7 +9,6 @@
     // Adiciona objetos produtos
     include 'objetos/criarProdutos.php';    
 
-
     if (isset($_GET['include'])){
 ?>
     <script>
@@ -108,7 +107,7 @@
                 foreach ($produtos as $ind => $value) { ?>
 
                 <div class="col">
-                    <div class="card card<?php echo $value->IdProduto;?>">
+                    <div class="card card<?php echo $ind?>">
                         
                         <img src="<?php echo $value->CaminhoImagem;?>" class="card-img-top">
                         
@@ -122,7 +121,7 @@
                                 </p>                                  
                                 <div class="row">
 
-                                    <a href="adicionarProduto.php?id=<?php echo $value->IdProduto;?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
+                                    <a href="adicionarProduto.php?id=<?php echo $ind;?>" type="button" class="btn btn-primary btnCompra">Comprar</a>
                                 </div>
                             </center>
                         </div>
@@ -142,4 +141,6 @@
 
 <?php
     include 'bootstrap/footer.php';
+
+    session_write_close();
 ?>

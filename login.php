@@ -4,7 +4,7 @@
 
 ?>
 
-<div class="container" style="margin-top: 70px; margin-bottom: 120px;">
+<div class="container" style="margin-top: 70px; margin-bottom: 150px;">
     <div class="row">
         <div class="col"></div>
 

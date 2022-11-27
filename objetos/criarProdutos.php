@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     // Incluir conexão
     include 'connection.php';
 
@@ -18,7 +20,7 @@
         while($row = mysqli_fetch_assoc($result)) {
 
             $_SESSION['produtos'][$i] = new Produtos;
-            $_SESSION['produtos'][$i]->IdProduto = $i;
+            $_SESSION['produtos'][$i]->IdProduto = $row["id_produto"];
             $_SESSION['produtos'][$i]->NomeProduto = $row["descricao"];
             $_SESSION['produtos'][$i]->ValorProduto = $row["preco"];
             $_SESSION['produtos'][$i]->CaminhoImagem = $row["url_imagem"];

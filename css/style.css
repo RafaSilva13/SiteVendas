@@ -41,9 +41,25 @@
     border-radius: 10px;
     min-height: 750px;
     max-height: 800px;
-    color: #ffffff;
     filter: drop-shadow(0 0 1px rgb(102, 102, 102));
     margin-bottom: 120px;
+}
+
+.textoPedido {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    color: #3a3a3a;
+    font-weight: bolder;
+}
+
+.textoCodPedido {
+    font-size: 17px;
+}
+
+.textoPed {
+    font-size: 22px;
+    margin-right: 51rem;
+    margin-left: 5px;
 }
 
 .containerCarrinho {
@@ -51,7 +67,6 @@
     border-radius: 10px;
     min-height: 500px;
     max-height: 800px;
-    color: #ffffff;
     filter: drop-shadow(0 0 1px rgb(102, 102, 102));
     margin-bottom: 120px;
 }
@@ -68,7 +83,7 @@
 .descricaoMP {
     min-height: 500px;
     max-height: 800px;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 .descricao {
@@ -111,6 +126,7 @@ input[type=number] {
 body {
     background-color:#ededed;
     margin-top: 50px;
+    margin-bottom: 0;
 }
 
 .preco {
@@ -204,7 +220,8 @@ body {
 .textoModal{
     margin-top: 5px;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
+    margin-bottom: 0px;
 }
 
 .navbar {
@@ -232,9 +249,11 @@ footer {
     height: 40px;
     background-color: #141414;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .t_itens {
@@ -247,15 +266,15 @@ footer {
 
 .tituloMP {
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     color: #3a3a3a;
 }
 
 .tituloCarrinho {
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     color: #3a3a3a;
 }
 

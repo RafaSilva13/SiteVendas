@@ -91,8 +91,7 @@
   // Inicia a sessão
   session_start();
   
-  if(isset($_SESSION['log'])){
-    if (($_SESSION['log'] === 1)){
+  if (isset($_SESSION['log']) && ($_SESSION['log'] > 0)){
 ?>
   <script>
     $(".btnsair").show();
@@ -100,7 +99,8 @@
     $(".btnlogin").hide();
   </script>
 <?php  
-  } else {
+  } 
+  else {
 ?>
   <script>
     $(".btnsair").hide();
@@ -108,6 +108,6 @@
     $(".btnlogin").show();
   </script>
 <?php  
-    }
   }
+  session_write_close();
 ?>

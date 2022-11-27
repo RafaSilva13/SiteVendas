@@ -9,21 +9,26 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     
-    $sql = "SELECT username, senha FROM clientes WHERE username = '$user' and senha = '$senha'";
+    $sql = "SELECT id_cliente, username, senha FROM clientes WHERE username = '$user' and senha = '$senha'";
     $result = mysqli_query($conn, $sql);
     
-    if (mysqli_num_rows($result) > 0) {
-        
-        session_start();
+    while($row = mysqli_fetch_assoc($result)) {
+        if (mysqli_num_rows($result) > 0) {
+            
+            session_start();
 
-        $_SESSION["log"] = 1;
+            $_SESSION["log"] = $row["id_cliente"];
 
-        header('location: index.php?log');    
-        
-    } else {
-        header('location: login.php?t=l');    
+            header('location: index.php?log');    
+            
+        } else {
+
+            $_SESSION["log"] = 0;
+
+            header('location: login.php?t=l');    
+        }
     }
-    
+
     mysqli_close($conn);
     
 ?>

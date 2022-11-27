@@ -5,8 +5,8 @@
     // Inclui a classe
     include 'classes/Produtos.class.php';   
 
+    session_start();
 ?>
-
 
 <div class="container">
     <div class="row">
@@ -67,8 +67,9 @@
 
                 </script>
 
-                <?php } 
-                } else if ((!isset($_SESSION['itensCarrinho'])) || ((isset($_SESSION['itensCarrinho'])) && ($itens === 0))) {
+                <?php 
+                    } 
+                } else if ((!isset($_SESSION['itensCarrinho']))) {
                 ?>
                     <p class="mensagemVazio">Nenhum item adicionado</p>
                 <?php
@@ -81,11 +82,22 @@
             <?php 
                 $soma = 0.00;
                 $itens = 0;
-                
                 if(isset($_SESSION['itensCarrinho'])) {
+                    if(array_sum($_SESSION['itensCarrinho']) === 0) {
+            ?>
+                
+            <script>
+                window.location.href = "areaEsvaziar.php";
+            </script>
+
+            <?php
+                    }
+                
+                
+                    $itens = array_sum($_SESSION['itensCarrinho']);
+                    
                     foreach ($_SESSION['itensCarrinho'] as $key => $value) {
                         $soma += ($_SESSION['produtos'][$key]->ValorProduto * $value);
-                        $itens += $value;    
                     }
                 }
             ?>
@@ -147,6 +159,7 @@
 </script>
 
 <?php
+    session_write_close();
 
     // Importa rodapé Bootstrap
     include 'bootstrap/footer.php';
