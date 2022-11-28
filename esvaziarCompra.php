@@ -5,5 +5,5 @@
 
     unset( $_SESSION['itensCarrinho']);
 
-    header("Location: carrinho.php");
+    header('location: carrinho.php?pE'); 
 ?>

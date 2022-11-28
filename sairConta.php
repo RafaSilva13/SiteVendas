@@ -3,5 +3,5 @@
 
     $_SESSION["log"] = 0;
 
-    header('location: index.php');
+    header('location: index.php?f');
 ?>

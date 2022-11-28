@@ -6,7 +6,77 @@
     include 'classes/Produtos.class.php';   
 
     session_start();
+    
+    if(isset($_GET['erro'])){
 ?>
+    <script>
+        $(document).ready(function(){
+            $(".erroToast").toast('show');
+        });
+    </script>
+<?php
+    }
+
+    if (isset($_GET['cV'])){
+?>
+    <script>
+        $(document).ready(function(){
+            $(".carrinhovazioToast").toast('show');
+        });
+    </script>
+<?php
+    }
+
+    if (isset($_GET['pE'])){
+?>
+    <script>
+        $(document).ready(function(){
+            $(".pedidoefeiToast").toast('show');
+        });
+    </script>
+<?php
+    }
+?>
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+    <div class="toast align-items-center text-bg-danger border-0 divToast erroToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <b>Erro, tente novamente.</b>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+    <div class="toast align-items-center text-bg-warning border-0 divToast carrinhovazioToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <b>Adicione um item ao carrinho!</b>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+    <div class="toast align-items-center text-bg-success border-0 divToast pedidoefeiToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <b>Pedido Efeituado!</b>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
 
 <div class="container">
     <div class="row">
@@ -122,7 +192,7 @@
                 </div>
                 
                 <div class="row" style="margin-top: 5px; margin-left: 0px;">
-                    <button type="button" class="btn btn-primary">Efetuar Compra</button>
+                    <a href="efetuarCompra.php" type="button" class="btn btn-primary">Efetuar Compra</a>
                 </div>
             </div>
         </div>

@@ -38,7 +38,29 @@
     </script>
 <?php
     }
+    if (isset($_GET['f'])){
 ?>
+    <script>
+        $(document).ready(function(){
+            $(".secaofinaToast").toast('show');
+        });
+    </script>
+<?php
+    }
+?>
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+    <div class="toast align-items-center text-bg-danger border-0 divToast secaofinaToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <b>Sessão finalizada.</b>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
 
 <!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">

@@ -88,27 +88,15 @@
                             </p>
                         </div>
 
-                        <div class="col-lg-3 aling-right" style="margin-top: -8px; margin-left: 3rem;">
+                        <div class="col-lg-3 aling-right" style="margin-top: 15px; margin-left: 3rem;">
                             <center>
                                 <span><b>Quantidade:</b> <?php echo $row2['quantidade'];?></span>
-                                <br>
-                                <button class="btn btn-outline-danger" style="margin-top: 5px;" id="btnModal<?php echo $o;?>">Cancelar compra</button>
                             </center>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- <script>
-                $(document).ready(function(){
-                    $("#btnModal<?php //echo $prod?>").click(function(){
-                    apagarItem = <?php // echo $prod?>;
-                        $('#modal').modal('show');
-                    });
-                });
-
-            </script> -->
-
             <hr>
 
             <?php 
