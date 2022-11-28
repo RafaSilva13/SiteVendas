@@ -7,7 +7,7 @@
     <title>Loja Santos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/newStyle.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600&display=swap" rel="stylesheet">
@@ -54,6 +54,8 @@
     <form class="d-flex aling-right" style="padding-top: 5px; padding-bottom: 5px;" role="search">
       <a class="btn btn-outline-light btncadastro btn-sm" href="login.php?t=c" type="button">Cadastro</a>
       <a class="btn btn-light btn-sm btnlogin"  href="login.php?t=l" type="button">Login</a>
+      
+      <span class="textoUsuario"></span>
 
       <button class="btn btn-danger btn-sm btnsair" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 1rem;" id="btnsairLog" type="button">SAIR</button>
     </form>
@@ -98,6 +100,8 @@
     $(".btnsair").show();
     $(".btncadastro").hide();
     $(".btnlogin").hide();
+    
+    $(".textoUsuario").show();  
   </script>
 <?php  
   } 
@@ -107,8 +111,10 @@
     $(".btnsair").hide();
     $(".btncadastro").show();
     $(".btnlogin").show();
+    $(".textoUsuario").hide();
   </script>
 <?php  
   }
   session_write_close();
 ?>
+

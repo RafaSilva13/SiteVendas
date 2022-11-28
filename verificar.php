@@ -9,11 +9,12 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     
-    $sql = "SELECT id_cliente, username, senha FROM clientes WHERE username = '$user' and senha = '$senha'";
+    $sql = "SELECT id_cliente, nome_completo, username, senha FROM clientes WHERE username = '$user' and senha = '$senha'";
     $result = mysqli_query($conn, $sql);
 
     while($row = $result->fetch_assoc()) {
         $id = $row["id_cliente"];
+        $usuario = $row["nome_completo"];
     }
     
     if (mysqli_num_rows($result) > 0) {
@@ -21,6 +22,7 @@
         session_start();
 
         $_SESSION["log"] = $id;
+        $_SESSION['usuario'] = $usuario;
 
         if(isset($_GET['lp']))
         {

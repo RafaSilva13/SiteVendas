@@ -6,6 +6,13 @@
     font-weight: 600;
 }
 
+.textoUsuario {
+    margin-top: 2px;
+    margin-right: 25px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 .imagemcarrinho {
     width: 65px;
     margin-left: 15px;
