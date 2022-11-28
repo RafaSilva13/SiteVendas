@@ -52,6 +52,7 @@
                         
                         <p class="textoPedido"> 
                             <span class="textoPed">Pedido <?php echo $n?></span>
+                            <span class="dataHora">Data/Hora: <?php echo $row['date_time_pedido']?></span>
                             <span class="textoCodPedido">Código do pedido: <?php echo $idPedido;?> </span>
                         </p>
 

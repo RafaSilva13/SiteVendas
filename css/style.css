@@ -60,13 +60,18 @@
     font-weight: bolder;
 }
 
+.dataHora{
+    margin-right: 5rem;
+    font-size: 15px;
+}
+
 .textoCodPedido {
     font-size: 17px;
 }
 
 .textoPed {
     font-size: 22px;
-    margin-right: 51rem;
+    margin-right: 30rem;
     margin-left: 5px;
 }
 
