@@ -24,6 +24,7 @@
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
+
 </div>
 
 <!-- Flexbox container for aligning the toasts -->
@@ -37,6 +38,7 @@
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
+    
 </div>
 
 <div class="container" style="margin-top: 70px; margin-bottom: 150px;">
